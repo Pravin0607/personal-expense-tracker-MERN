@@ -7,6 +7,11 @@ const Navitems:Navitem[]=[{
     icon:Home
 },
 {
+    name:"Categories",
+    path:"categories",
+    icon:LibraryBig
+},
+{
     name:"Expenses",
     path:"expenses",
     icon:Receipt
@@ -15,11 +20,6 @@ const Navitems:Navitem[]=[{
     name:"Reports",
     path:"reports",
     icon:ChartColumnDecreasing
-},
-{
-    name:"Categories",
-    path:"categories",
-    icon:LibraryBig
 },
 {
     name:"Ai",
