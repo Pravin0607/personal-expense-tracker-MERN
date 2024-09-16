@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ModeToggle } from "./ModeToggle";
 import { Navitem } from "@/lib/types";
 
 const SidebarItem = ({ path, name, icon: Icon }: Navitem) => {
     return (
         <li>
-            <Link className='w-full hover:bg-gray-200 dark:hover:text-black px-2 py-1 flex items-center gap-3 rounded-md' to={path}>
+            <NavLink end className={({ isActive }) => `w-full hover:bg-gray-200 dark:hover:text-black px-2 py-1 flex items-center gap-3 rounded-md ${isActive ?'bg-gray-200 dark:text-black':'hover:bg-gray-200 dark:hover:text-black'}`} to={path}>
                 <Icon size={30} />
                 <span>{name}</span>
-            </Link>
+            </NavLink>
         </li>
     );
 };
