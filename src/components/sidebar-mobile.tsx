@@ -6,11 +6,13 @@ import { Navitems } from "@/lib/constants"
 
 const SidebarMobile = () => {
   return (<Sheet>
-  <SheetTrigger className="md:hidden">
-    <Button className="bg-background text-foreground hover:bg-background">
-        <Menu size={30} />
-    </Button>
-  </SheetTrigger>
+   <SheetTrigger asChild>
+        <div className="md:hidden">
+          <Button className="bg-background text-foreground hover:bg-background">
+            <Menu size={30} />
+          </Button>
+        </div>
+      </SheetTrigger>
   <SheetContent side={'left'} className="w-[250px]">
     <SidebarContent Navitems={Navitems} />
   </SheetContent>
