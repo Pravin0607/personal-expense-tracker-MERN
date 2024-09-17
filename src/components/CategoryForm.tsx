@@ -29,9 +29,9 @@ const CategoryForm = () => {
     }
 
   return (
-    <div className='flex md:justify-center items-center'>
+    <div className='flex justify-center items-center'>
 <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 flex flex-col w-full md:w-1/2 items-center ">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 lg:space-y-0 lg:space-x-4  flex flex-col lg:flex-row w-full md:w-1/2 items-center md:items-start">
         <FormField
           control={form.control}
           name="categoryName"
@@ -44,7 +44,7 @@ const CategoryForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className='w-max md:w-1/2 font-bold' size={'sm'}>Submit</Button>
+        <Button type="submit" className='w-max md:w-1/2 font-bold text-sm lg:text-base' size={'sm'}>Submit</Button>
       </form>
     </Form>
     </div>
